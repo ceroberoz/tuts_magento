@@ -1,0 +1,17 @@
+test phtml
+
+<?
+  echo $this->getChildHtml("coba");
+?>
+
+<?php
+  echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links_sm')->toHtml();
+?>
+
+<!-- Call helper .phtml -->
+<?
+$helper = Mage::helper('brandoutlet_training');
+
+echo $helper->showHello();
+?>
+<!-- end -->
