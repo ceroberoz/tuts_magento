@@ -12,6 +12,64 @@
       </brandoutlet_training>
     </helpers>
   </global>
+
+  <models>
+        <brandoutlet_training>
+            <class>Brandoutlet_Training_Model</class>
+            <resourceModel>brandoutlet_training_resource</resourceModel>
+        </brandoutlet_training>
+        <brandoutlet_training_resource>
+            <class>Brandoutlet_Training_Model_Resource</class>
+            <entities>
+                <comment>
+                    <table>bo_comment</table>
+                </comment>
+            </entities>
+        </brandoutlet_training_resource>
+    </models>
+
+<admin>
+  <adminhtml>
+          <acl>
+              <resources>
+                  <all>
+                      <title>Allow Everything</title>
+                  </all>
+                  <admin>
+                      <children>
+                          <system>
+                              <children>
+                                  <config>
+                                      <children>
+                                          <brandoutlet>
+                                              <title>brandoutlet - All</title>
+                                          </brandoutlet>
+                                      </children>
+                                  </config>
+                              </children>
+                          </system>
+                      </children>
+                  </admin>
+              </resources>
+          </acl>
+      </adminhtml>
+</admin>
+
+<config>
+<!-- routers untuk admin -->
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <brandoutlet_training before="Mage_Adminhtml">Brandoutlet_Training_Adminhtml</brandoutlet_training>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
+
   <frontend>
     <routers>
       <brandoutlet_training>

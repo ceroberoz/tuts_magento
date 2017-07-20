@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <Brandoutlet_Training>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Brandoutlet_Training>
+  </modules>
+</config>
